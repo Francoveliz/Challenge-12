@@ -5,8 +5,8 @@
   --card-bg: hsl(227, 47%, 96%);
   --text-a: hsl(230, 17%, 14%);
   --text-b: hsl(228, 12%, 44%);
-  --sm-card-hover:#e1e3f0;
-  --toggle-switch:hsl(230, 22%, 74%);
+  --sm-card-hover: #e1e3f0;
+  --toggle-switch: hsl(230, 22%, 74%);
   --facebook: hsl(208, 92%, 53%);
   --twitter: hsl(203, 89%, 53%);
   --youtube: hsl(348, 97%, 39%);
@@ -18,15 +18,15 @@
   --card-bg: hsl(228, 28%, 20%);
   --text-a: hsl(0, 0%, 100%);
   --text-b: hsl(228, 34%, 66%);
-  --sm-card-hover:#333a56;
-    --toggle-switch:linear-gradient(90deg, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100%);
+  --sm-card-hover: #333a56;
+  --toggle-switch: linear-gradient(90deg, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100%);
 }
 
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg);
   color: var(--text-a);
-transition: .4s ease;
+  transition: .4s ease;
 }
 
 .main {
@@ -94,11 +94,12 @@ hr {
   position: absolute;
   right: 0;
   top: 0;
-
 }
-.slider:hover{
+
+.slider:hover {
   background: linear-gradient(90deg, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100%);
 }
+
 .slider:before {
   background-color: #fff;
   bottom: 2px;
@@ -138,11 +139,13 @@ input:checked+.slider:before {
   margin-bottom: 2rem;
   border-radius: 5px;
   transition: .4s ease;
-  cursor:pointer;
+  cursor: pointer;
 }
-.sm-card:hover{
+
+.sm-card:hover {
   background: var(--sm-card-hover);
 }
+
 .sm-card:first-child {
   border-top: 4px solid var(--facebook);
 }
@@ -200,11 +203,13 @@ i {
   color: var(--text-b);
   display: flex;
   align-items: center;
-  padding-bottom:1rem;
+  padding-bottom: 1rem;
 }
-.sm-card i{
+
+.sm-card i {
   margin-right: .2rem;
 }
+
 .sm-card h2 {
   font-size: 3rem;
   font-weight: bold;
@@ -236,11 +241,13 @@ i {
   align-items: flex-end;
   border-radius: 5px;
   transition: .4s ease;
-  cursor:pointer;
+  cursor: pointer;
 }
-.overview__card:hover{
-    background: var(--sm-card-hover);
+
+.overview__card:hover {
+  background: var(--sm-card-hover);
 }
+
 .overview__card p {
   grid-area: a;
   margin: 0;
@@ -268,72 +275,6 @@ i {
   font-size: .8rem;
   margin: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (min-width: 576px) {
   .container {
