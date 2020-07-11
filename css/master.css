@@ -5,6 +5,8 @@
   --card-bg: hsl(227, 47%, 96%);
   --text-a: hsl(230, 17%, 14%);
   --text-b: hsl(228, 12%, 44%);
+  --sm-card-hover:#e1e3f0;
+  --toggle-switch:hsl(230, 22%, 74%);
   --facebook: hsl(208, 92%, 53%);
   --twitter: hsl(203, 89%, 53%);
   --youtube: hsl(348, 97%, 39%);
@@ -16,13 +18,15 @@
   --card-bg: hsl(228, 28%, 20%);
   --text-a: hsl(0, 0%, 100%);
   --text-b: hsl(228, 34%, 66%);
+  --sm-card-hover:#333a56;
+    --toggle-switch:linear-gradient(90deg, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100%);
 }
 
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg);
   color: var(--text-a);
-  transition: .4s ease;
+transition: .4s ease;
 }
 
 .main {
@@ -62,10 +66,11 @@ hr {
 
 .dark-mode__section p {
   margin: 0;
+  color: var(--text-a);
 }
 
 /* Dark mode switch */
-.theme-switch-wrapper{
+.theme-switch-wrapper {
   display: flex;
   align-items: center;
 }
@@ -82,33 +87,35 @@ hr {
 }
 
 .slider {
-  background-color: hsl(230, 22%, 74%);
+  background: var(--toggle-switch);
   bottom: 0;
   cursor: pointer;
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
-  transition: .4s ease;
-}
 
+}
+.slider:hover{
+  background: linear-gradient(90deg, hsl(210, 78%, 56%) 0%, hsl(146, 68%, 55%) 100%);
+}
 .slider:before {
   background-color: #fff;
   bottom: 2px;
   content: "";
   height: 19px;
-  right: 2px;
+  right: 3px;
   position: absolute;
-  transition: .4s ease ;
+  transition: .4s ease;
   width: 19px;
 }
 
 input:checked+.slider {
-  background-color: hsl(163, 72%, 41%);
+  background: var(--toggle-switch);
 }
 
 input:checked+.slider:before {
-  transform: translateX(-22px);
+  transform: translateX(-20px);
 }
 
 .slider.round {
@@ -130,9 +137,12 @@ input:checked+.slider:before {
   padding: 2rem;
   margin-bottom: 2rem;
   border-radius: 5px;
-
+  transition: .4s ease;
+  cursor:pointer;
 }
-
+.sm-card:hover{
+  background: var(--sm-card-hover);
+}
 .sm-card:first-child {
   border-top: 4px solid var(--facebook);
 }
@@ -218,9 +228,13 @@ i {
     "a b"
     "c d";
   align-items: flex-end;
-    border-radius: 5px;
+  border-radius: 5px;
+  transition: .4s ease;
+  cursor:pointer;
 }
-
+.overview__card:hover{
+    background: var(--sm-card-hover);
+}
 .overview__card p {
   grid-area: a;
   margin: 0;
@@ -249,6 +263,72 @@ i {
   margin: 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -263,7 +343,101 @@ i {
 
 @media (min-width: 992px) {
   .container {
-    max-width: 960px;
+    max-width: 1024px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .dark-mode__section {
+    margin: auto 0;
+    text-align: center;
+  }
+
+  .dark-mode__section p {
+    margin-bottom: 0.45rem;
+    margin-right: 1rem;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .sm-card__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 250px;
+    grid-gap: 30px;
+    grid-template-areas:
+      "facebook twitter instagram youtube";
+  }
+
+  .facebook {
+    grid-area: facebook;
+  }
+
+  .twitter {
+    grid-area: twitter;
+  }
+
+  .instagram {
+    grid-area: instagram;
+  }
+
+  .youtube {
+    grid-area: youtube;
+  }
+
+  .overview__container h1 {
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+  }
+
+  .overview__card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 150px 150px;
+    grid-gap: 10px 30px;
+    grid-template-areas:
+      "facebook-1 facebook-2 twitter-1 twitter-2"
+      "instagram-1 instagram-2 youtube-1 youtube-2";
+  }
+
+  .facebook-1 {
+    grid-area: facebook-1;
+  }
+
+  .facebook-2 {
+    grid-area: facebook-2;
+  }
+
+  .twitter-1 {
+    grid-area: twitter-1;
+  }
+
+  .twitter-2 {
+    grid-area: twitter-2;
+  }
+
+  .instagram-1 {
+    grid-area: instagram-1;
+  }
+
+  .instagram-2 {
+    grid-area: instagram-2;
+  }
+
+  .youtube-1 {
+    grid-area: youtube-1;
+  }
+
+  .youtube-2 {
+    grid-area: youtube-2;
   }
 }
 
